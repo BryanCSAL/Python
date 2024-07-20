@@ -1,3 +1,5 @@
+import os
+
 word = 'Margarida'
 numCharacter = len(word)
 character = ...
@@ -12,6 +14,7 @@ character = input(f'Tente uma letra:')
 
 # Loop que se mantém enquanto há "*" na palavra.
 while '*' in attemptWord:
+    os.system("cls")
     # O uso do .lower() serve para tonar tudo minúsculo e evitar o case sensitivy.
     if character.lower() in word.lower():    
         # Itera sobre os índices da palavra
@@ -35,8 +38,8 @@ while '*' in attemptWord:
     character = input(f'Tente uma letra:')
 
     # Contabilisa mais uma tentativa
-    tentativas = tentativas + 1
+    tentativas += 1
 
     
-
+os.system("cls")
 print(f"Você descobriu a palavra {attemptWord}, levou {tentativas} tentativas!")
